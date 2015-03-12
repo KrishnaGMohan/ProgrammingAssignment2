@@ -1,7 +1,10 @@
+### ScratchWork
+
 ## Put comments here that give an overall description of what your
 ## functions do
 
 ## Write a short comment describing this function
+rm(list=ls())
 
 makeCacheMatrix <- function(x = matrix()) {
         matinv <- NULL
@@ -32,3 +35,13 @@ cacheSolve <- function(x, ...) {
         x$setinv(matinv)
         matinv
 }
+
+
+AMat <- matrix(0,nr=5, nc=5)
+AMat <- abs(col(AMat)-row(AMat))+1
+
+
+AMatZ <-makeCacheMatrix(AMat)
+
+AMatZ$getinv()
+cacheSolve(AMatZ)
