@@ -36,6 +36,14 @@ cacheSolve <- function(x, ...) {
         matinv
 }
 
+m <- matrix(c(-1, -2, 1, 1), 2,2)
+x <- makeCacheMatrix(m)
+x$get()
+inv <- cacheSolve(x)
+inv
+inv <- cacheSolve(x)
+getting cached data
+inv
 
 AMat <- matrix(0,nr=5, nc=5)
 AMat <- abs(col(AMat)-row(AMat))+1
