@@ -53,3 +53,20 @@ AMatZ <-makeCacheMatrix(AMat)
 
 AMatZ$getinv()
 cacheSolve(AMatZ)
+
+
+
+
+m <- matrix(c(-1, -2, 1, 1), 2,2)
+x <- makeCacheMatrix(m)
+
+
+x$get()
+inv <- cacheSolve(m)
+inv
+
+
+class(makeCacheMatrix)
+
+
+
